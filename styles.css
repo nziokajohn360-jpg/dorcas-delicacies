@@ -6,9 +6,6 @@
 }
 
 html,body {
-  /*background-color: var(--secondary-color);*/
-  /*background: linear-gradient(-90deg, var(--accent-color), var(--secondary-color) 40%, var(--accent-color));
-  /*background: linear-gradient(to bottom,#fff8e7,#fff);*/
   background: linear-gradient(-120deg,var(--secondary-color),var(--accent-color));
   color: var(--primary-color);
   font-family: 'Poppins', sans-serif;
@@ -78,6 +75,10 @@ section{
     margin-top: 10px;
 }
 
+.hero-text p{
+  line-height: 1.8;
+}
+
 h1, h2, h3 {
   color: var(--accent-color);
   text-align: center;
@@ -135,13 +136,42 @@ h1, h2, h3 {
     text-decoration: underline;
 }
 
+.pricing{
+  background-color:var(--secondary-color);
+  color: var(--primary-color);
+  padding: 1rem;
+}
+
+.pricing-inner{
+  width:100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap:10px;
+  line-height: 1.8;
+}
+
+.pricing-heading{
+  border-bottom:1px solid var(--accent-color);
+}
+
+.pricing-card{
+  border:1px solid var(--accent-color);
+}
+
+.pricing-notes{
+  width:650px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
 .cakes-section {
   text-align: center;
   padding: 4rem 2rem;
   background-color: var(--secondary-color);
 }
 
-.cakes-section h2 {
+.cakes-section h2,.pricing-section-heading{
   font-family: 'Playfair Display', serif;
   color: var(--accent-color);
   font-size: 2rem;
@@ -322,15 +352,20 @@ h1, h2, h3 {
     min-width: 95%;
     font-size: calc(2rem - 18px);
   }
-  #home{
+
+  .btn{
     font-size: calc(2rem - 18px);
   }
+
   #about{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  
+  }
+
+  .hero-inner{
+    max-width: 95%;
   }
 
   .about-text{
@@ -340,5 +375,7 @@ h1, h2, h3 {
   .about-image img{
     max-width: 85%;
   }
-
+  .pricing-notes{
+    max-width:95%;
+  }
 }

@@ -158,6 +158,32 @@ h1, h2, h3 {
   border:1px solid var(--accent-color);
 }
 
+.pricing-card li{
+  list-style-type: none;
+}
+
+.pricing-card li::before{
+  content: "►";
+  color: var(--accent-color);
+  margin-right:3px;
+}
+
+.pricing-notes li{
+  list-style-type: none;
+}
+
+.pricing-notes li:first-child::before{
+  content:"1) ";
+}
+
+.pricing-notes li:nth-child(2)::before{
+  content:"2) "
+}
+
+.pricing-notes li:nth-child(3)::before{
+  content:"3) "
+}
+
 .pricing-notes{
   width:650px;
   margin-left: auto;

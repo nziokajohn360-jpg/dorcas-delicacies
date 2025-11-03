@@ -18,7 +18,23 @@
                 <li><a href="#testimonials" class="navlink">Reviews</a></li>
             </ul>
         </nav>
+        <button class="menu-toggle" id="menuToggle">
+              <div class="hamburger-line"></div>
+              <div class="hamburger-line"></div>
+              <div class="hamburger-line"></div>
+        </button>
+        <div class="side-menu" id="sideMenu">
+            <ul class="menu-items">
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#cakes"><i class="fas fa-birthday-cake"></i> Cakes</a></li>
+                <li><a href="#pricing"><i class="fas fa-tags"></i> Pricing</a></li>
+                <li><a href="#testimonials"><i class="fas fa-star"></i> Reviews</a></li>
+                <li><a href="#footer"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
     </header>
+        
     <!-- HOME / HERO SECTION -->
 <section id="home" class="hero">
   <div class="hero-inner">
@@ -234,4 +250,38 @@
   </div>
 </footer>
 </body>
+
+ <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sideMenu = document.getElementById('sideMenu');
+
+        // Toggle menu when menu button is clicked
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            sideMenu.classList.toggle('active');
+            
+            // Prevent body scrolling when menu is open
+            document.body.style.overflow = sideMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking on a menu item
+        const menuItems = document.querySelectorAll('.menu-items a');
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                sideMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Close menu when clicking outside the menu
+        sideMenu.addEventListener('click', (e) => {
+            if (e.target === sideMenu) {
+                menuToggle.classList.remove('active');
+                sideMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+
 </html>

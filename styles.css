@@ -25,6 +25,10 @@ html,body {
     margin-bottom: 0;
 }
 
+.header-text{
+  display: none;
+}
+
 #navbar{
     background-color: var(--accent-color);
     height: 2.5rem;
@@ -423,6 +427,16 @@ h1, h2, h3 {
     padding:0;
   }
 
+  .header-text{
+    display: block;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-family: 'Playfair Display', sans-serif;
+  }
+
   .menu-toggle {
             background: rgba(255, 255, 255, 0.2);
             border: none;
@@ -587,9 +601,4 @@ h1, h2, h3 {
     max-width:95%;
   }
 }
-
-
-
-
-
 
